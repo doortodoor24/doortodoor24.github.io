@@ -211,19 +211,25 @@ body {
   height: 200px;
   overflow: hidden;
 }
-.header .logo {
-  position: absolute;
-  top: 0;
-  left: 0;
+@media (min-width: 481px) {
+  .header .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 .header h1 {
-  margin-left: 50px;
   width: 100%;
   padding: 25px 0;
   text-align: center;
   font-size: 48px;
   color: #404040;
   font-weight: 800;
+}
+@media (max-width: 481px) {
+  .header h1 {
+    margin-left: 50px;
+  }
 }
 .header p {
   margin-left: 50px;
@@ -327,16 +333,23 @@ body {
   min-height: 295px;
   overflow: hidden;
 }
-.copyright .map {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  width: 295px;
-  height: 295px;
-  overflow: hidden;
+@media (min-width: 769px) {
+  .copyright .map {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 295px;
+    height: 295px;
+    overflow: hidden;
+  }
 }
-.copyright .address {
-  margin-left: 345px;
+@media (max-width: 768px) {
+  .copyright .map {
+    width: 100%;
+  }
+  .copyright .map img {
+    width: 100%;
+  }
 }
 .copyright .address dl {
   padding-bottom: 8px;
@@ -360,7 +373,20 @@ body {
   font-weight: 700;
   color: #333;
 }
-.copyright .connect {
-  margin-left: 345px;
-  padding-top: 36px;
+@media (min-width: 769px) {
+  .copyright .address {
+    margin-left: 345px;
+  }
+  .copyright .connect {
+    margin-left: 345px;
+    padding-top: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .copyright .address {
+    margin-top: 20px;
+  }
+  .copyright .connect {
+    padding-top: 36px;
+  }
 }
