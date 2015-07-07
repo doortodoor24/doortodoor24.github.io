@@ -291,40 +291,83 @@ body {
 }
 .service {
   position: relative;
-  padding-bottom: 80px;
   width: 100%;
   overflow: hidden;
 }
-.service > div {
-  float: left;
-  padding: 80px 1.5% 0;
-  width: 30%;
-  text-align: center;
+@media (min-width: 481px) {
+  .service {
+    padding-bottom: 80px;
+  }
+  .service > div {
+    float: left;
+    padding: 80px 1.5% 0;
+    width: 30%;
+    text-align: center;
+  }
+  .service > div h2 {
+    display: inline-block;
+    padding: 0 3px 5px;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 800;
+    border-bottom: 2px solid red;
+  }
+  .service > div p {
+    padding: 10px 0 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #4c4c4c;
+    text-align: left;
+  }
+  .service > div.arti0 {
+    background: url('../images/icoService0.jpg') no-repeat center top;
+  }
+  .service > div.arti1 {
+    background: url('../images/icoService1.jpg') no-repeat center top;
+  }
+  .service > div.arti2 {
+    background: url('../images/icoService2.jpg') no-repeat center top;
+  }
 }
-.service > div h2 {
-  display: inline-block;
-  padding: 0 3px 5px;
-  font-size: 18px;
-  line-height: 1;
-  font-weight: 800;
-  border-bottom: 2px solid red;
-}
-.service > div p {
-  padding: 10px 0 0 0;
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 400;
-  color: #4c4c4c;
-  text-align: left;
-}
-.service > div.arti0 {
-  background: url('../images/icoService0.jpg') no-repeat center top;
-}
-.service > div.arti1 {
-  background: url('../images/icoService1.jpg') no-repeat center top;
-}
-.service > div.arti2 {
-  background: url('../images/icoService2.jpg') no-repeat center top;
+@media (max-width: 480px) {
+  .service {
+    padding-bottom: 20px;
+  }
+  .service > div {
+    box-sizing: border-box;
+    padding-left: 50px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .service > div h2 {
+    display: inline-block;
+    padding: 0 3px 5px;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 800;
+    border-bottom: 2px solid red;
+  }
+  .service > div p {
+    padding: 10px 0 20px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #4c4c4c;
+    text-align: left;
+  }
+  .service > div.arti0 {
+    background: url('../images/icoService0.jpg') no-repeat;
+    background-size: 36px 29.5px;
+  }
+  .service > div.arti1 {
+    background: url('../images/icoService1.jpg') no-repeat;
+    background-size: 39.5px 31.5px;
+  }
+  .service > div.arti2 {
+    background: url('../images/icoService2.jpg') no-repeat;
+    background-size: 36px 29px;
+  }
 }
 .member {
   position: relative;
@@ -333,39 +376,72 @@ body {
   overflow: hidden;
   background: url('../images/bgMember.gif') repeat-x left bottom;
 }
-.member > div {
-  position: relative;
-  width: 47%;
-  min-height: 120px;
-  overflow: hidden;
+@media (min-width: 768px) {
+  .member > div {
+    position: relative;
+    width: 47%;
+    min-height: 120px;
+    overflow: hidden;
+  }
+  .member .member0 {
+    float: left;
+  }
+  .member .member1 {
+    float: right;
+  }
+  .member .thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+  }
+  .member .review {
+    margin-left: 140px;
+  }
+  .member .review h2 {
+    font-size: 18px;
+    line-height: 1;
+    color: #333;
+    font-weight: 800;
+  }
+  .member .review p {
+    padding-top: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #666;
+    font-weight: 400;
+  }
 }
-.member .member0 {
-  float: left;
-}
-.member .member1 {
-  float: right;
-}
-.member .thumb {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 120px;
-}
-.member .review {
-  margin-left: 140px;
-}
-.member .review h2 {
-  font-size: 18px;
-  line-height: 1;
-  color: #333;
-  font-weight: 800;
-}
-.member .review p {
-  padding-top: 10px;
-  font-size: 14px;
-  line-height: 1.4;
-  color: #666;
-  font-weight: 400;
+@media (max-width: 767px) {
+  .member > div {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    min-height: 120px;
+    overflow: hidden;
+  }
+  .member .thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+  }
+  .member .review {
+    margin-left: 140px;
+  }
+  .member .review h2 {
+    font-size: 18px;
+    line-height: 1;
+    color: #333;
+    font-weight: 800;
+  }
+  .member .review p {
+    padding-top: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #666;
+    font-weight: 400;
+  }
 }
 .copyright {
   position: relative;
