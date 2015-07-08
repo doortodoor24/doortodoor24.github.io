@@ -51,7 +51,7 @@
 		</div>
 		
 		<div class="copyright">
-			<div class="map"><img src="images/@map.jpg" alt="" width="295" height="295" /></div>
+			<div class="map" id="mapImage"><img src="images/@map.jpg" alt="" width="295" height="295" /></div>
 			<div class="address">
 				<dl>
 					<dt>상호명 :</dt>
@@ -86,5 +86,43 @@
 		
 	</div>
 </div>
+
+
+<script type="text/javascript" src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=671b594b2d7fe9411436853a982580d1"></script>
+<script type="text/javascript">
+function naverMapShow(){
+	$("#mapImage").empty();
+	var oPoint = new nhn.api.map.LatLng(37.5525475, 126.9186633);
+	nhn.api.map.setDefaultPoint('LatLng');
+	oMap = new nhn.api.map.Map('mapImage' ,{
+		point : oPoint,
+		zoom : 11,
+		enableWheelZoom : true,
+		enableDragPan : true,
+		enableDblClickZoom : true,
+		mapMode : 0,
+		activateTrafficMap : false,
+		activateBicycleMap : false,
+		minMaxLevel : [ 1, 14 ]
+	});
+
+	var mapZoom = new nhn.api.map.ZoomControl(); // - 줌 컨트롤 선언
+	var mapTypeChangeButton = new nhn.api.map.MapTypeBtn(); // - 지도 타입 버튼 선언
+	mapTypeChangeButton.setPosition({top:10, left:50}); // - 지도 타입 버튼 위치 지정
+
+	mapZoom.setPosition({left:10, top:10}); // - 줌 컨트롤 위치 지정
+	oMap.addControl(mapZoom); // - 줌 컨트롤 추가
+	oMap.addControl(mapTypeChangeButton);
+
+	var oSize = new nhn.api.map.Size(28, 37); 
+	var oOffset = new nhn.api.map.Size(14, 37);
+	var oIcon = new nhn.api.map.Icon('http://static.naver.com/maps2/icons/pin_spot2.png', oSize, oOffset);
+	var oMarker = new nhn.api.map.Marker(oIcon, {title : 'CUBE : 02-322-1175'});
+	oMarker.setPoint(oMap.getCenter());
+	oMap.addOverlay(oMarker); 
+
+};
+naverMapShow();
+</script>
 </body>
 </html>
