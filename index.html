@@ -110,8 +110,8 @@ function naverMapShow(){
 	});
 	
 	$(window).resize(function() {
-		w = $(window).width()  - 95;
-		h = "295px";
+		w = $("#mapImage").width()  - 95;
+		h = 295;
 		oMap.setSize(new nhn.api.map.Size(w, h));
 	});
 
