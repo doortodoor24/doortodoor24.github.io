@@ -54,7 +54,7 @@
 		</div>
 		
 		<div class="copyright">
-			<div class="map" id="mapImage"><img src="images/@map.jpg" alt="" width="295" height="295" /></div>
+			<div class="map" id="mapImage"></div>
 			<div class="address">
 				<dl>
 					<dt>상호명 :</dt>
@@ -95,7 +95,7 @@
 <script type="text/javascript">
 function naverMapShow(){
 	$("#mapImage").empty();
-	var oPoint = new nhn.api.map.LatLng(37.5525475, 126.9186633);
+	var oPoint = new nhn.api.map.LatLng(37.5964750, 127.0820730);
 	nhn.api.map.setDefaultPoint('LatLng');
 	oMap = new nhn.api.map.Map('mapImage' ,{
 		point : oPoint,
@@ -107,6 +107,12 @@ function naverMapShow(){
 		activateTrafficMap : false,
 		activateBicycleMap : false,
 		minMaxLevel : [ 1, 14 ]
+	});
+	
+	$(window).resize(function() {
+		w = $(window).width()  - 95;
+		h = "295px";
+		oMap.setSize(new nhn.api.map.Size(w, h));
 	});
 
 	var mapZoom = new nhn.api.map.ZoomControl(); // - 줌 컨트롤 선언
