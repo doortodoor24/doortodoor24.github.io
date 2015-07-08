@@ -54,7 +54,9 @@
 		</div>
 		
 		<div class="copyright" id="copyright">
-			<div class="map" id="mapImage"></div>
+			<div class="map" id="mapCase">
+				<div id="mapImage"></div>
+			</div>
 			<div class="address">
 				<dl>
 					<dt>상호명 :</dt>
@@ -110,7 +112,7 @@ function naverMapShow(){
 	});
 	
 	$(window).resize(function() {
-		w = $("#copyright").width();
+		w = $("#mapCase").width();
 		h = 295;
 		oMap.setSize(new nhn.api.map.Size(w, h));
 	});
