@@ -7,7 +7,11 @@
 html,body{height:100%;}
 body{background:#f5f5f5 url('../images/bg.jpg') no-repeat center top;background-size:100% auto;font-family: 'Nanum Gothic', sans-serif;}
 
-.dodoWrap{padding:80px 0;margin:0 auto;width:100%;}
+.dodoWrap{
+	width:100%;
+	@media(min-width:768px){padding:80px 0;margin:0 auto;}
+	@media(max-width:767px){padding:5% 0;}
+}
 .dodoContent{margin:0 auto;max-width:860px;background:#fff;
 	@media(min-width:768px){padding:0 50px;}
 	@media(max-width:767px){padding:0 3%;}
