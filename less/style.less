@@ -94,12 +94,20 @@ body{background:#f5f5f5 url('../images/bg.jpg') no-repeat center top;background-
 			dd{padding-left:10px;font-size:15px;line-height:1.5;font-weight:700;color:#333;}
 		}
 	}
+	
+	.connect a img{width:100%;height:auto;}
 	@media (min-width:769px){
 		.address{margin-left:345px;}
-		.connect{margin-left:345px;padding-top:36px;}
+		.connect{margin-left:345px;padding-top:36px;
+			a.tel{display:inline-block;width:245px;height:76px;}
+			a.mailto{display:inline-block;width:245px;height:76px;}
+		}
 	}
 	@media (max-width:768px){
 		.address{margin-top:20px;}
-		.connect{padding-top:36px;}
+		.connect{padding-top:36px;
+			a.tel{display:inline-block;width:150px;height:auto;}
+			a.mailto{display:inline-block;width:150px;height:auto;}
+		}
 	}
 }

@@ -499,6 +499,10 @@ body {
   font-weight: 700;
   color: #333;
 }
+.copyright .connect a img {
+  width: 100%;
+  height: auto;
+}
 @media (min-width: 769px) {
   .copyright .address {
     margin-left: 345px;
@@ -507,6 +511,16 @@ body {
     margin-left: 345px;
     padding-top: 36px;
   }
+  .copyright .connect a.tel {
+    display: inline-block;
+    width: 245px;
+    height: 76px;
+  }
+  .copyright .connect a.mailto {
+    display: inline-block;
+    width: 245px;
+    height: 76px;
+  }
 }
 @media (max-width: 768px) {
   .copyright .address {
@@ -514,5 +528,15 @@ body {
   }
   .copyright .connect {
     padding-top: 36px;
+  }
+  .copyright .connect a.tel {
+    display: inline-block;
+    width: 150px;
+    height: auto;
+  }
+  .copyright .connect a.mailto {
+    display: inline-block;
+    width: 150px;
+    height: auto;
   }
 }

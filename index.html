@@ -84,8 +84,8 @@
 				</dl>
 			</div>
 			<div class="connect">
-				<a href="tel:01099915882"><img src="images/btnPhone.jpg" alt="" /></a>
-				<a href="mailto:"><img src="images/btnEmail.jpg" alt="" /></a>
+				<a href="tel:01099915882" class="tel"><img src="images/btnPhone.jpg" alt="" width="245" height="76" /></a>
+				<a href="mailto:" class="mailto"><img src="images/btnEmail.jpg" alt="" width="245" height="76" /></a>
 			</div>
 		</div>
 		
@@ -108,7 +108,8 @@ function naverMapShow(){
 		mapMode : 0,
 		activateTrafficMap : false,
 		activateBicycleMap : false,
-		minMaxLevel : [ 1, 14 ]
+		minMaxLevel : [ 1, 14 ],
+		size : new nhn.api.map.Size($("#mapCase").width(), 295)
 	});
 	
 	$(window).resize(function() {
