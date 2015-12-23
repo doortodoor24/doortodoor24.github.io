@@ -1,0 +1,397 @@
+@charset "UTF-8";
+/*! D222style RESET CSS */
+/* 
+ * Dstyle RESET CSS
+ * create by won yong bong (A.K.A dstyle) 
+ * License: none (public domain) 
+ */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(lib/bootstrap.min.css);
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  background: transparent;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: underline;
+}
+dt {
+  display: block;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body,
+html {
+  width: 100%;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+body {
+  line-height: 1;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  vertical-align: middle;
+}
+b,
+strong {
+  font-weight: bold;
+}
+img {
+  border: 0;
+}
+hr {
+  display: none;
+}
+caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+pre {
+  overflow: auto;
+}
+/*! bootstrap custom */
+input[type=radio],
+input[type=checkbox] {
+  margin-top: 0;
+  margin-right: 5px;
+}
+/*! 레이아웃 설정 */
+html,
+body {
+  height: 100%;
+  background: #f5f5f5;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  color: #666;
+}
+.doortodoor24Wrap {
+  margin: 0 auto;
+  width: 550px;
+}
+@media (max-width: 550px) {
+  .doortodoor24Wrap {
+    width: 100%;
+  }
+}
+/*! HEADER */
+.header {
+  padding: 34px 35px 19px;
+  width: 100%;
+  background: #f5f5f5 url('../images/bgTop.png') no-repeat right bottom;
+  font-size: 1px;
+  line-height: 1;
+}
+/*! SECTION */
+.sectionWrap {
+  width: 100%;
+  background: #fff;
+}
+.sectionWrap > section {
+  padding: 40px 35px;
+  border-top: 1px dashed #b2b2b2;
+}
+.sectionWrap > section .h2 {
+  padding-bottom: 40px;
+}
+.sectionWrap > section:first-child {
+  border-top: 0;
+  padding: 0 35px;
+}
+.sectionWrap > section:first-child .h2 {
+  padding-bottom: 0;
+}
+.sectionWrap .subContent {
+  padding: 0 15px;
+  width: 100%;
+  overflow: hidden;
+}
+/*! 공통모듈 */
+.h2 {
+  font-size: 44px;
+  line-height: 1.1;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #000;
+}
+@media (max-width: 550px) {
+  .h2 {
+    font-size: 30px;
+  }
+}
+.descH2 {
+  padding: 15px 15px 0;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #626262;
+}
+/*! 비주얼 */
+.sectionWrap > section.visualSec {
+  padding-bottom: 40%;
+  background: url('../images/visual.png') no-repeat left bottom;
+  background-size: 100% auto;
+}
+/*! 서비스 */
+.sectionWrap > section.serviceSec .serviceArti {
+  padding-top: 20px;
+}
+.sectionWrap > section.serviceSec .serviceArti h3 {
+  padding-bottom: 15px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+}
+.sectionWrap > section.serviceSec .serviceArti p {
+  padding-left: 70px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  min-height: 60px;
+}
+.sectionWrap > section.serviceSec .serviceArti.type-0 > p {
+  background: url('../images/icoService0.png') no-repeat;
+}
+.sectionWrap > section.serviceSec .serviceArti.type-1 > p {
+  background: url('../images/icoService1.png') no-repeat;
+}
+.sectionWrap > section.serviceSec .serviceArti.type-2 > p {
+  background: url('../images/icoService2.png') no-repeat;
+}
+@media (max-width: 550px) {
+  .sectionWrap > section.serviceSec .serviceArti br {
+    display: none;
+  }
+}
+.sectionWrap > section.serviceSec .serviceArti:first-child {
+  padding-top: 0;
+}
+/*! 회사정보 */
+.sectionWrap > section.informationSec .infoDl {
+  padding-top: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+.sectionWrap > section.informationSec .infoDl dt {
+  float: left;
+  width: 95px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #000;
+}
+.sectionWrap > section.informationSec .infoDl dd {
+  float: left;
+  width: 355px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+.sectionWrap > section.informationSec .infoDl:first-child {
+  padding-top: 0;
+}
+/*! 연결하기 */
+.sectionWrap > section.contactSec h2.h2 {
+  padding-bottom: 0;
+}
+.sectionWrap > section.contactSec .row {
+  padding-top: 20px;
+}
+.sectionWrap > section.contactSec .col-label {
+  line-height: 32px;
+}
+.sectionWrap > section.contactSec .col-label > label {
+  color: #000;
+}
+@media (max-width: 550px) {
+  .sectionWrap > section.contactSec .col-label > label br {
+    display: none;
+  }
+}
+.sectionWrap > section.contactSec .col-checkbox {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.sectionWrap > section.contactSec .col-checkbox > label {
+  font-weight: 400;
+  line-height: 1.4;
+}
+.sectionWrap > section.contactSec input[type=text],
+.sectionWrap > section.contactSec textarea {
+  font-weight: 400;
+}
+.sectionWrap > section.contactSec .descContact {
+  padding-top: 10px;
+  font-size: 12px;
+  color: #333;
+  font-weight: 500;
+  text-align: right;
+}
+.sectionWrap > section.contactSec .col-agree {
+  padding-bottom: 10px;
+  text-align: right;
+  line-height: 1.4;
+}
+.sectionWrap > section.contactSec .col-agree > label {
+  color: #333;
+  font-size: 13px;
+  margin-right: 5px;
+}
+/*! Vcard 영역 */
+.sectionWrap > section.vcardSec {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.sectionWrap > section.vcardSec h3 {
+  float: left;
+}
+.sectionWrap > section.vcardSec p {
+  float: right;
+  padding-top: 18px;
+}
+/*! FOOTER */
+.footer {
+  padding: 20px 35px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 900;
+  color: #333;
+}
