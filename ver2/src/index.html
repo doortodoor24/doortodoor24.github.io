@@ -59,18 +59,55 @@
             <h2 class="h2">CONTACT</h2>
             <p class="descH2">저희들에게 연락주세요.<br />고객님께 만족을 드리기 위하여 최선을 다하겠습니다.</p>
             <div class="subContent">
-                <div class="row">
-                    <div class="col-xs-3">타이틀</div>
-                    <div class="col-xs-9">폼</div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-3">타이틀</div>
-                    <div class="col-xs-9">폼</div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-3">타이틀</div>
-                    <div class="col-xs-9">폼</div>
-                </div>
+                <form action="">
+                    <div class="row">
+                        <div class="col-label col-xs-12 col-sm-2"><label for="place0">현재위치</label></div>
+                        <div class="col-xs-12 col-sm-10"><input type="text" class="form-control" id="place0" placeholder="현재 살고 계신 곳을 입력해주세요." /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-label col-xs-12 col-sm-2"><label for="place1">이사위치</label></div>
+                        <div class="col-xs-12 col-sm-10"><input type="text" class="form-control" id="place1" placeholder="이사하실 곳을 입력해주세요." /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-label col-xs-12 col-sm-2"><label for="date">이사날짜</label></div>
+                        <div class="col-xs-12 col-sm-10"><input type="text" class="form-control" id="date" placeholder="이삿날을 입력해주세요.(ex : 2015년 12월 30일)" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-label col-xs-12 col-sm-2"><label for="name">성함</label></div>
+                        <div class="col-xs-12 col-sm-3"><input type="text" class="form-control" id="name" placeholder="성명" /></div>
+                        <div class="col-label col-xs-12 col-sm-2"><label for="tel">연락처</label></div>
+                        <div class="col-xs-12 col-sm-5"><input type="text" class="form-control" id="tel" placeholder="000-0000-0000" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-label col-xs-12 col-sm-2"><label>주요물품</label></div>
+                        <div class="col-xs-12 col-sm-10">
+                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 장롱</label></div>
+                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 침대</label></div>
+                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 화장대</label></div>
+                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 전자레인지</label></div>
+                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> TV</label></div>
+                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 에어콘</label></div>
+                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 소파</label></div>
+                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 식탁</label></div>
+                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 냉장고</label></div>
+                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 가스렌지</label></div>
+                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 세탁기</label></div>
+                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 자전거</label></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-label col-xs-12 col-sm-2"><label for="comment">추가물품 <br />& <br />주의사항 <br />필요사항</label></div>
+                        <div class="col-xs-12 col-sm-10"><textarea class="form-control" name="" id="comment" cols="30" rows="10" placeholder="저희들이 주의해야 하는 내용에 대해서 작성해주세요."></textarea></div>
+                        <div class="col-xs-12"><p class="descContact">* 고가의 제품이나, 이사시 주의해야 할점 , 필요 옵션(에어컨 찰부탁 등)을 적어주세요.</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-agree col-xs-12">
+                            <label><input type="checkbox"> 개인정보수집동의</label> <a href="#" class="btn btn-info btn-xs">전문보기</a>
+                        </div>
+                        <div class="col-xs-6"><a href="#" class="btn btn-warning btn-block">전화하기</a></div>
+                        <div class="col-xs-6"><a href="#" class="btn btn-danger btn-block">문의하기</a></div>
+                    </div>
+                </form>
             </div>
         </section>
         <section class="vcardSec">
