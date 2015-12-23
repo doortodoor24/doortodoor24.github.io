@@ -1,0 +1,81 @@
+@charset "UTF-8";
+@import "lib/val.less";
+@import "lib/reset.less";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(lib/bootstrap.min.css);
+
+/*! 레이아웃 설정333 */
+html,body{height:100%;background:@color-bodybg;font-family: 'Noto Sans KR', sans-serif;font-weight:700;color:@color-text;}
+.doortodoor24Wrap{margin:0 auto;width:@width-wrapper;}
+
+/*! HEADER */
+.header{position:fixed;padding:34px @gap-wrapper-horizontal 19px;width:@width-content;background:@color-bodybg url('../images/bgTop.png') no-repeat right bottom;font-size:1px;line-height:1;}
+
+/*! SECTION */
+.sectionWrap{width:@width-wrapper;background:@color-sectionbg;
+  >section{
+    padding:@gap-section-vertical @gap-wrapper-horizontal;
+    border-top:1px dashed @color-crossline;
+    .h2{padding-bottom:@gap-section-vertical;}
+  }
+  >section:first-child{border-top:0;padding:0 @gap-wrapper-horizontal;
+    .h2{padding-bottom:0;}
+  }
+  .subContent{padding:0 @gap-section-horizontal;width:100%;overflow:hidden;}
+}
+
+/*! 공통모듈 */
+.h2{font-size:44px;line-height:48px;font-weight:900;text-transform: uppercase;letter-spacing:-1px;color:@color-title;}
+.descH2{padding:15px @gap-section-horizontal 0;font-size:14px;line-height:24px;font-weight:700;color:#626262;}
+
+/*! 비주얼 */
+.sectionWrap>section.visualSec {
+  padding-bottom:image-height("../../images/visual.png") + 20px;
+  padding-top:115px;
+  background: url('../images/visual.png') no-repeat left bottom;
+  background-size: 100% auto;
+}
+/*! 서비스 */
+.sectionWrap>section.serviceSec{
+  .serviceArti{padding-top:20px;
+    h3{padding-bottom:15px;color:@color-subtitle;font-size:18px;font-weight:500;}
+    p{padding-left:70px;font-size:14px;font-weight:400;line-height:20px;min-height:60px;}
+    &.type-0>p{background:url('../images/icoService0.png') no-repeat;}
+    &.type-1>p{background:url('../images/icoService1.png') no-repeat;}
+    &.type-2>p{background:url('../images/icoService2.png') no-repeat;}
+  }
+  .serviceArti:first-child{padding-top:0;}
+}
+
+/*! 회사정보 */
+.sectionWrap>section.informationSec{
+  .infoDl{padding-top:20px;width:100%;overflow:hidden;
+    dt{float:left;width:95px;font-size:14px;font-weight:900;color:@color-title;}
+    dd{float:left;width:@width-subContent - 95px;font-size:14px;font-weight:400;color:@color-subtitle;}
+  }
+  .infoDl:first-child{padding-top:0;}
+}
+
+/*! 연결하기 */
+.sectionWrap>section.contactSec{
+  h2.h2{padding-bottom:0;}
+}
+
+/*! Vcard 영역 */
+.sectionWrap>section.vcardSec{padding-top:20px;padding-bottom:20px;width:100%;box-sizing:border-box;
+  overflow:hidden;
+  h3{float:left;}
+  p{float:right;padding-top:18px;}
+}
+
+/*! FOOTER */
+.footer{padding:20px @gap-wrapper-horizontal;width:@width-content;text-align:center;font-size:12px;font-weight:900;color:#333;}
+
+
+
+
+
+
+
+
+
