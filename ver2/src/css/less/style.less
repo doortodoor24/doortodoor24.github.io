@@ -1,8 +1,6 @@
 @charset "UTF-8";
 @import "lib/val.less";
 @import "lib/reset.less";
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url(lib/bootstrap.min.css);
 
 /*! bootstrap custom */
 input[type=radio],input[type=checkbox]{margin-top:0;margin-right:5px;}
@@ -65,6 +63,10 @@ html,body{height:100%;background:@color-bodybg;font-family: 'Noto Sans KR', sans
   .infoDl{padding-top:20px;width:100%;overflow:hidden;
     dt{float:left;width:95px;font-size:14px;font-weight:900;color:@color-title;}
     dd{float:left;width:@width-subContent - 95px;font-size:14px;font-weight:400;color:@color-subtitle;}
+    @media (max-width: 550px) {
+      dt{width:100%;}
+      dd{width:100%;margin-top:10px;}
+    }
   }
   .infoDl:first-child{padding-top:0;}
 }
@@ -84,9 +86,12 @@ html,body{height:100%;background:@color-bodybg;font-family: 'Noto Sans KR', sans
     >label{font-weight:400;line-height:1.4;}
   }
   input[type=text],textarea{font-weight:400;}
-  .descContact{padding-top:10px;font-size:12px;color:@color-subtitle;font-weight:500;text-align:right;}
+  .descContact{padding-top:10px;font-size:12px;line-height:1.4;color:@color-subtitle;font-weight:500;text-align:right;}
   .col-agree{padding-bottom:10px;text-align:right;line-height:1.4;
     >label{color:@color-subtitle;font-size:13px;margin-right:5px;}
+  }
+  @media (max-width: 550px) {
+    .col-tel{margin-top:20px;}
   }
 }
 

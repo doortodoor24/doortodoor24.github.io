@@ -5,8 +5,6 @@
  * create by won yong bong (A.K.A dstyle) 
  * License: none (public domain) 
  */
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url(lib/bootstrap.min.css);
 html,
 body,
 div,
@@ -321,6 +319,15 @@ body {
   font-weight: 400;
   color: #333;
 }
+@media (max-width: 550px) {
+  .sectionWrap > section.informationSec .infoDl dt {
+    width: 100%;
+  }
+  .sectionWrap > section.informationSec .infoDl dd {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
 .sectionWrap > section.informationSec .infoDl:first-child {
   padding-top: 0;
 }
@@ -357,6 +364,7 @@ body {
 .sectionWrap > section.contactSec .descContact {
   padding-top: 10px;
   font-size: 12px;
+  line-height: 1.4;
   color: #333;
   font-weight: 500;
   text-align: right;
@@ -370,6 +378,11 @@ body {
   color: #333;
   font-size: 13px;
   margin-right: 5px;
+}
+@media (max-width: 550px) {
+  .sectionWrap > section.contactSec .col-tel {
+    margin-top: 20px;
+  }
 }
 /*! Vcard 영역 */
 .sectionWrap > section.vcardSec {
