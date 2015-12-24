@@ -267,12 +267,12 @@ body {
 }
 /*! 서비스 */
 .sectionWrap > section.serviceSec .serviceArti {
-  padding-top: 20px;
+  padding-top: 40px;
 }
 .sectionWrap > section.serviceSec .serviceArti h3 {
   padding-bottom: 15px;
   color: #333;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
 }
 .sectionWrap > section.serviceSec .serviceArti p {
