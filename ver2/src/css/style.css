@@ -267,37 +267,57 @@ body {
 }
 /*! 서비스 */
 .sectionWrap > section.serviceSec .serviceArti {
-  padding-top: 40px;
+  margin-top: 40px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
-.sectionWrap > section.serviceSec .serviceArti h3 {
+.sectionWrap > section.serviceSec .serviceArti > h3 {
   padding-bottom: 15px;
   color: #333;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
-.sectionWrap > section.serviceSec .serviceArti p {
-  padding-left: 70px;
+.sectionWrap > section.serviceSec .serviceArti > div {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 65px;
+  height: 65px;
+  padding: 8px 0 0 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+}
+.sectionWrap > section.serviceSec .serviceArti > div > i {
+  font-size: 47px;
+  color: #333;
+}
+.sectionWrap > section.serviceSec .serviceArti > p {
+  padding-left: 80px;
   font-size: 14px;
   font-weight: 400;
-  line-height: 20px;
-  min-height: 60px;
-}
-.sectionWrap > section.serviceSec .serviceArti.type-0 > p {
-  background: url('../images/icoService0.png') no-repeat;
-}
-.sectionWrap > section.serviceSec .serviceArti.type-1 > p {
-  background: url('../images/icoService1.png') no-repeat;
-}
-.sectionWrap > section.serviceSec .serviceArti.type-2 > p {
-  background: url('../images/icoService2.png') no-repeat;
+  line-height: 23px;
+  min-height: 65px;
 }
 @media (max-width: 550px) {
   .sectionWrap > section.serviceSec .serviceArti br {
     display: none;
   }
+  .sectionWrap > section.serviceSec .serviceArti > div {
+    width: 40px;
+    height: 40px;
+  }
+  .sectionWrap > section.serviceSec .serviceArti > div > i {
+    font-size: 25px;
+  }
+  .sectionWrap > section.serviceSec .serviceArti > p {
+    padding-left: 55px;
+  }
 }
 .sectionWrap > section.serviceSec .serviceArti:first-child {
-  padding-top: 0;
+  margin-top: 0;
 }
 /*! 회사정보 */
 .sectionWrap > section.informationSec .infoDl {
@@ -398,6 +418,12 @@ body {
 .sectionWrap > section.vcardSec p {
   float: right;
   padding-top: 18px;
+}
+@media (max-width: 440px) {
+  .sectionWrap > section.vcardSec h3 {
+    width: 100%;
+    text-align: center;
+  }
 }
 /*! FOOTER */
 .footer {
