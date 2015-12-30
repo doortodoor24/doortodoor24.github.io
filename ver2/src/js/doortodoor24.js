@@ -26,6 +26,6 @@ var formDataFormat = {
     comment:"" // 추가물품 코멘트
 };
 
-require(["app/createApp"],function(){
+require(["angular","app/createApp"],function(angular){
     angular.bootstrap(document,["doortodoor24App"]);
 });
