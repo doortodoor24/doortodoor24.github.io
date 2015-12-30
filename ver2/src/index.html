@@ -1,16 +1,7 @@
 <!doctype html>
 <html lang="ko" ng-app="doortodoor24App">
 <head>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-56483625-6', 'auto');
-        ga('send', 'pageview');
-
-    </script>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-56483625-6', 'auto');ga('send', 'pageview');</script>
     <meta charset="UTF-8" />
     <title>도도이사 - 이사또한 Edge 있게</title>
 
@@ -18,6 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="autocomplete" content="off"	/>
+
+    <meta property="og:title" content="도도이사 - 이사또한 Edge 있게" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.doortodoor24.com" />
+    <meta property="og:image" content="http://www.doortodoor24.com/images/og.jpg" />
+    <meta property="og:description" content="도도이사, 포장이사, 원룸이사, 오피스텔이사, 용달이사, 이사 전문업체" />
 
     <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png" />
@@ -64,12 +61,12 @@
 
 </head>
 <body>
-<div class="doortodoor24Wrap">
-    <header class="header"><h1><img src="images/logo.png" alt="도도이사" /></h1></header>
+<div class="doortodoor24Wrap" itemscope itemtype="http://schema.org/LocalBusiness">
+    <header class="header"><h1><img src="images/logo.png" alt="도도이사" itemprop="image" /></h1></header>
     <div class="sectionWrap">
         <section class="visualSec">
             <h2 class="h2">WE service<br />DOOR TO DOOR<br />MOVING & Storage</h2>
-            <p class="descH2">저희 도도이사는 언제나 고객님께 최선의 서비스를 하기 위해 노력합니다.<br />이사하시는 날 이후에도 걱정없이 편안하게 쉬실수 있도록 노력하겠습니다.</p>
+            <p class="descH2">저희 <span itemprop="name">도도이사</span>는 언제나 고객님께 최선의 서비스를 하기 위해 노력합니다.<br />이사하시는 날 이후에도 걱정없이 편안하게 쉬실수 있도록 노력하겠습니다.</p>
         </section>
         <section class="serviceSec">
             <h2 class="h2">SERVICE</h2>
@@ -104,7 +101,7 @@
                 </dl>
                 <dl class="infoDl type-2">
                     <dt>주소</dt>
-                    <dd>서울특별시 중랑구 중화1동 중화한신APT 106-1801</dd>
+                    <dd itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">서울특별시</span> 중랑구 중화1동 중화한신APT 106-1801</dd>
                 </dl>
                 <dl class="infoDl type-3">
                     <dt>사업주</dt>
@@ -112,7 +109,7 @@
                 </dl>
                 <dl class="infoDl type-4">
                     <dt>전화번호</dt>
-                    <dd>010-9991-5882</dd>
+                    <dd itemprop="telephone">010-9991-5882</dd>
                 </dl>
             </div>
         </section>
@@ -207,18 +204,8 @@
             <p><img src="images/titCopyright.png" alt="Door To Door Express : 도도이사 이사또한 Edge있게" /></p>
         </section>
     </div>
-    <footer class="footer">Copyright 2015 doortodoor24.com All rights reserved</footer>
+    <footer class="footer">Copyright 2015 <span itemprop="url">doortodoor24.com</span> All rights reserved</footer>
 </div>
 <script data-main="js/doortodoor24" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.22/require.min.js"></script>
-<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
-<script type="text/javascript">
-    var app  = angular.module("doortodoor24App",[]);
-    app.controller("doortodoorCtrl",function($scope){
-        $scope.update = function(){
-            console.log("나요?");
-        };
-    });
-</script>-->
 </body>
 </html>
