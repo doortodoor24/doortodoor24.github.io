@@ -12,9 +12,19 @@ var del = require('del');
 
 var imagemin = require('gulp-imagemin');
 
+var uglify = require('gulp-uglify');
+
+
+
 
 gulp.task('default', ['clean'], function() {
-    gulp.start('less', 'mincss', 'minhtml','minimages');
+    gulp.start('less', 'mincss', 'minhtml','minjs','minimages');
+});
+
+gulp.task('minjs', function () {
+    return gulp.src('./src/js/**/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./js'));
 });
 
 gulp.task('less', function () {
@@ -34,7 +44,7 @@ gulp.task('minhtml', function() {
         .pipe(gulp.dest('./'))
 });
 gulp.task('clean', function() {
-    return del(['./css', './images', './index.html']);
+    return del(['./css','./js', './images', './index.html']);
 });
 
 gulp.task('minimages', function() {

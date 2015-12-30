@@ -80,6 +80,7 @@ html,body{height:100%;background:@color-bodybg;font-family: 'Noto Sans KR', sans
 .sectionWrap>section.contactSec{
   h2.h2{padding-bottom:0;}
   .row{padding-top:20px;}
+  .form-group{margin-bottom:0;}
   .col-label{line-height:32px;
     >label{color: @color-title;
       @media (max-width: 550px) {
@@ -87,6 +88,10 @@ html,body{height:100%;background:@color-bodybg;font-family: 'Noto Sans KR', sans
       }
     }
   }
+  form>div:first-child{padding-top:5px;}
+  .descP{text-align:right;font-size:12px;color:#333;font-weight:600;}
+  .xi-require{color:@color-brand;font-size:14px;font-weight:900;}
+  .col-label .xi-require{position:absolute;top:5px;left:0;}
   .col-checkbox{padding-top:5px;padding-bottom:5px;
     >label{font-weight:400;line-height:1.4;}
   }
@@ -100,13 +105,22 @@ html,body{height:100%;background:@color-bodybg;font-family: 'Noto Sans KR', sans
   }
 }
 
+/*! 개인정보보호정책 */
+.agreeDocumentSec{height:0;transition: height 1.2s;overflow: hidden;
+  .document{height:300px;overflow:auto;border:1px solid #ccc;padding:10px;font-size:14px;color:#666;line-height:1.4;font-weight:400;
+    h4,ul,p{padding-top:10px;}
+    h4{color:#333;}
+  }
+}
+.agreeDocumentSec.active{height:310px;}
+
 /*! Vcard 영역 */
 .sectionWrap>section.vcardSec{padding-top:20px;padding-bottom:20px;width:100%;box-sizing:border-box;
   overflow:hidden;
   h3{float:left;}
   p{float:right;padding-top:18px;}
   @media (max-width: 440px) {
-    h3{width:100%;text-align:center;}
+    h3,p{float:none;width:100%;text-align:center;}
   }
 }
 

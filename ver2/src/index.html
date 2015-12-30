@@ -1,16 +1,35 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" ng-app="doortodoor24App">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="autocomplete" content="off"	/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href=images/favicon"/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <title>도도이사 - 이사또한 Edge 있게</title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" />
     <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+
     <!--
     todo 풋터 이미지 어색 -> 이미지 스케일 수정
     todo 로고 이미지 어색 -> 스케일 수정 => retina 체인지로 수정? (200*400 짜리면, 400 * 800 짜리가 2x로 적용함. 배경.)
@@ -18,9 +37,7 @@
     todo meta description 연결
     todo 아이콘 넣기
     -->
-    <script type="text/javascript">
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-56483625-6', 'auto');ga('send', 'pageview');
-    </script>
+
 </head>
 <body>
 <div class="doortodoor24Wrap">
@@ -78,54 +95,85 @@
         <section class="contactSec">
             <h2 class="h2">CONTACT</h2>
             <p class="descH2">저희들에게 연락주세요.<br />고객님께 만족을 드리기 위하여 최선을 다하겠습니다.</p>
-            <div class="subContent">
-                <form action="">
+            <div class="subContent" id="contactForm" ng-controller="doortodoorCtrl">
+                <p class="descP"><i class="xi-require" title="필수요소">*</i> 필수요소</p>
+                <form method="post" ng-submit="update()">
                     <div class="row">
-                        <div class="col-label col-xs-12 col-sm-2"><label for="place0">현재위치</label></div>
-                        <div class="col-xs-12 col-sm-10"><input type="text" class="form-control" id="place0" placeholder="현재 살고 계신 곳을 입력해주세요." /></div>
+                        <div class="col-label col-xs-12 col-sm-2"><i class="xi-require" title="필수요소">*<span class="sr-only">필수입력</span></i><label for="place0">현재위치</label></div>
+                        <div class="col-xs-12 col-sm-10 form-group has-feedback" id="place0Group"><input type="text" class="form-control" id="place0" ng-model="place0" placeholder="현재 살고 계신 곳을 입력해주세요." /></div>
                     </div>
                     <div class="row">
-                        <div class="col-label col-xs-12 col-sm-2"><label for="place1">이사위치</label></div>
-                        <div class="col-xs-12 col-sm-10"><input type="text" class="form-control" id="place1" placeholder="이사하실 곳을 입력해주세요." /></div>
+                        <div class="col-label col-xs-12 col-sm-2"><i class="xi-require" title="필수요소">*<span class="sr-only">필수입력</span></i><label for="place1">이사위치</label></div>
+                        <div class="col-xs-12 col-sm-10 form-group has-feedback" id="place1Group"><input type="text" class="form-control" id="place1" ng-model="place1" placeholder="이사하실 곳을 입력해주세요." /></div>
                     </div>
                     <div class="row">
-                        <div class="col-label col-xs-12 col-sm-2"><label for="date">이사날짜</label></div>
-                        <div class="col-xs-12 col-sm-10"><input type="text" class="form-control" id="date" placeholder="이삿날을 입력해주세요.(ex : 2015년 12월 30일)" /></div>
+                        <div class="col-label col-xs-12 col-sm-2"><i class="xi-require" title="필수요소">*<span class="sr-only">필수입력</span></i><label for="date">이사날짜</label></div>
+                        <div class="col-xs-12 col-sm-10 form-group has-feedback" id="dateGroup"><input type="text" class="form-control" id="date" ng-model="date" placeholder="이삿날을 입력해주세요.(ex : 2015년 12월 30일)" /></div>
                     </div>
                     <div class="row">
-                        <div class="col-label col-xs-12 col-sm-2"><label for="name">성함</label></div>
-                        <div class="col-xs-12 col-sm-3"><input type="text" class="form-control" id="name" placeholder="성명" /></div>
-                        <div class="col-label col-tel col-xs-12 col-sm-2"><label for="tel">연락처</label></div>
-                        <div class="col-xs-12 col-sm-5"><input type="text" class="form-control" id="tel" placeholder="000-0000-0000" /></div>
+                        <div class="col-label col-xs-12 col-sm-2"><i class="xi-require" title="필수요소">*<span class="sr-only">필수입력</span></i><label for="name">성함</label></div>
+                        <div class="col-xs-12 col-sm-3 form-group has-feedback" id="nameGroup"><input type="text" class="form-control" id="name" ng-model="name" placeholder="성명" /></div>
+                        <div class="col-label col-tel col-xs-12 col-sm-2"><i class="xi-require" title="필수요소">*<span class="sr-only">필수입력</span></i><label for="tel">연락처</label></div>
+                        <div class="col-xs-12 col-sm-5 form-group has-feedback" id="telGroup"><input type="text" class="form-control" id="tel" ng-model="tel" placeholder="000-0000-0000" /></div>
                     </div>
                     <div class="row">
                         <div class="col-label col-xs-12 col-sm-2"><label>주요물품</label></div>
                         <div class="col-xs-12 col-sm-10">
-                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 장롱</label></div>
-                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 침대</label></div>
-                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 화장대</label></div>
-                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 전자레인지</label></div>
-                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> TV</label></div>
-                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 에어콘</label></div>
-                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 소파</label></div>
-                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 식탁</label></div>
-                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 냉장고</label></div>
-                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 가스렌지</label></div>
-                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 세탁기</label></div>
-                            <div class="col-checkbox col-xs-6 col-sm-4"><label><input type="checkbox"> 자전거</label></div>
+                           <div class="col-checkbox col-xs-6 col-sm-4" ng-repeat="item in items">
+                                <label><input type="checkbox" ng-model="item.checked" value="{{item.name}}" /> {{item.name}}</label>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-label col-xs-12 col-sm-2"><label for="comment">추가물품 <br />& <br />주의사항 <br />필요사항</label></div>
-                        <div class="col-xs-12 col-sm-10"><textarea class="form-control" name="" id="comment" cols="30" rows="10" placeholder="저희들이 주의해야 하는 내용에 대해서 작성해주세요."></textarea></div>
-                        <div class="col-xs-12"><p class="descContact">* 고가의 제품이나, 이사시 주의해야 할점 , 필요 옵션(에어컨 찰부탁 등)을 적어주세요.</p></div>
+                        <div class="col-xs-12 col-sm-10"><textarea class="form-control" name="" id="comment" ng-model="comment" cols="30" rows="10" placeholder="저희들이 주의해야 하는 내용에 대해서 작성해주세요."></textarea></div>
+                        <div class="col-xs-12"><p class="descContact">* 고가의 제품이나, 이사시 주의해야 할점 , 필요 옵션(에어컨 탈부착 등)을 적어주세요.</p></div>
                     </div>
                     <div class="row">
                         <div class="col-agree col-xs-12">
-                            <label><input type="checkbox"> 개인정보수집동의</label> <a href="#" class="btn btn-info btn-xs">전문보기</a>
+                            <label><input type="checkbox" ng-model="agree"> <i class="xi-require" title="필수요소">*<span class="sr-only">필수입력</span></i>개인정보수집동의</label> <a href="#" class="btn btn-info btn-xs" onclick="$('.agreeDocumentSec').toggleClass('active');return false;">전문보기</a>
+                        </div>
+                        <div class="col-agree-document col-xs-12">
+                            <div class="agreeDocumentSec">
+                                <div class="document">
+                                    <h3>개인정보 보호정책</h3>
+                                    <p>DoortoDoot24.com(이하 '회사')는 고객님의 개인정보를 중요시하며, '정보통신망 이용촉진 및 정보보호'에 관한 법률을 준수하고 있습니다.</p>
+                                    <p>회사는 개인정보취급방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.</p>
+                                    <p>회사는 개인정보취급방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.</p>
+                                    <h4>수집하는 개인정보 항목</h4>
+                                    <p>회사는 견적문의, 빠른 상담요청 등을 위해 아래와 같은 개인정보를 수집하고 있습니다.</p>
+                                    <ul>
+                                        <li>* 수집항목 : 이름, 현재주소, 이사가실주소, 이사날짜, 연락처</li>
+                                        <li>* 개인정보 수집방법 : 홈페이지(http://www.doortodoor24.com)</li>
+                                    </ul>
+                                    <h4>개인정보의 수집 및 이용목적</h4>
+                                    <p>회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.</p>
+                                    <ul>
+                                        <li>* 견적문의, 빠른상담신청 서비스에 대한 상담</li>
+                                    </ul>
+                                    <h4>개인정보의 보유 및 이용기간</h4>
+                                    <p>회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외 없이 해당 정보를 지체 없이 파기합니다.</p>
+                                    <h4>파기절차</h4>
+                                    <p>회원님이 견적 및 상담 등을 위해 입력하신 정보는 목적이 달성된 후 정보이관없이 즉시파기 됩니다.</p>
+                                    <h4>개인정보에 관한 민원서비스</h4>
+                                    <p>회사는 고객의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 관련 부서 및 개인정보관리책임자를 지정하고 있습니다.</p>
+                                    <ul>
+                                        <li>개인정보관리책임자 성명 : 원용봉</li>
+                                        <li>이메일 : dstyle0210@gmail.com</li>
+                                    </ul>
+                                    <p>귀하께서는 회사의 서비스를 이용하시며 발생하는 모든 개인정보보호 관련 민원을 개인정보관리책임자 혹은 담당부서로 신고하실 수 있습니다. 회사는 이용자들의 신고사항에 대해 신속하게 충분한 답변을 드릴 것입니다.</p>
+                                    <p>기타 개인정보침해에 대한 신고나 상담이 필요하신 경우에는 아래 기관에 문의하시기 바랍니다.</p>
+                                    <ul>
+                                        <li>1.개인분쟁조정위원회 (http://www.1336.or.kr / 1336)</li>
+                                        <li>2.정보보호마크인증위원회 (http://www.eprivacy.or.kr / 02-580-0533~4)</li>
+                                        <li>3.대검찰청 인터넷범죄수사센터 (http://icic.sppo.go.kr / 02-3480-3600)</li>
+                                        <li>4.경찰청 사이버테러대응센터 (http://www.ctrc.go.kr / 02-392-0330)</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-xs-6"><a href="#" class="btn btn-warning btn-block">전화하기</a></div>
-                        <div class="col-xs-6"><a href="#" class="btn btn-danger btn-block">문의하기</a></div>
+                        <div class="col-xs-6"><button type="submit" class="btn btn-danger btn-block">문의하기</button></div>
                     </div>
                 </form>
             </div>
@@ -137,5 +185,16 @@
     </div>
     <footer class="footer">Copyright 2015 doortodoor24.com All rights reserved</footer>
 </div>
+<script data-main="js/doortodoor24" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.22/require.min.js"></script>
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
+<script type="text/javascript">
+    var app  = angular.module("doortodoor24App",[]);
+    app.controller("doortodoorCtrl",function($scope){
+        $scope.update = function(){
+            console.log("나요?");
+        };
+    });
+</script>-->
 </body>
 </html>
